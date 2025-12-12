@@ -24,7 +24,8 @@ Users can search any city, view current weather conditions, air quality index (A
 
 🖥️ Preview
 
-(Add screenshot images here if you want)
+<img width="988" height="594" alt="image" src="https://github.com/user-attachments/assets/06ef35a3-c910-432d-837b-b01cf5b32afa" />
+
 
 📂 Project Structure
 weather-app/
