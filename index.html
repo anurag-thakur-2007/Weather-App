@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather Now</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Weather Now</h1>
+      <p>Check live weather & air quality anywhere in the world</p>
+    </header>
+
+    <main>
+      <!-- Search Bar -->
+      <form id="search-form" class="search-bar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Enter city name (e.g. London, New York)..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Search</button>
+        <button type="button" id="geo-btn" class="secondary-btn">
+          Use my location
+        </button>
+      </form>
+
+      <p id="helper-text" class="helper-text">
+        Try: <span class="chip">London</span>
+        <span class="chip">Tokyo</span>
+        <span class="chip">Mumbai</span>
+      </p>
+
+      <!-- Status Message -->
+      <div id="status-message" class="status-message"></div>
+
+      <!-- Weather Card -->
+      <section id="weather-card" class="weather-card hidden">
+        <div class="weather-main">
+          <div class="location-block">
+            <h2 id="location-name"></h2>
+            <p id="location-region" class="muted"></p>
+            <p id="local-time" class="muted small"></p>
+          </div>
+
+          <div class="temp-block">
+            <span id="temp-c" class="temp"></span>
+            <span id="condition-text" class="condition-text"></span>
+          </div>
+
+          <div class="icon-block">
+            <img id="condition-icon" alt="Weather icon" />
+            <p id="day-night-label" class="small muted"></p>
+          </div>
+        </div>
+
+        <div class="weather-details">
+          <div class="detail">
+            <span class="label">Feels like</span>
+            <span id="feelslike-c" class="value"></span>
+          </div>
+          <div class="detail">
+            <span class="label">Humidity</span>
+            <span id="humidity" class="value"></span>
+          </div>
+          <div class="detail">
+            <span class="label">Wind</span>
+            <span id="wind" class="value"></span>
+          </div>
+          <div class="detail">
+            <span class="label">Pressure</span>
+            <span id="pressure" class="value"></span>
+          </div>
+          <div class="detail">
+            <span class="label">Visibility</span>
+            <span id="visibility" class="value"></span>
+          </div>
+          <div class="detail">
+            <span class="label">UV Index</span>
+            <span id="uv" class="value"></span>
+          </div>
+        </div>
+
+        <!-- Air Quality Card -->
+        <div class="aqi-card">
+          <div class="aqi-header">
+            <h3>Air Quality</h3>
+            <span id="aqi-label" class="aqi-badge">—</span>
+          </div>
+          <p id="aqi-description" class="muted small"></p>
+
+          <div class="aqi-grid">
+            <div class="aqi-item">
+              <span class="label">US EPA Index</span>
+              <span id="aqi-value" class="value"></span>
+            </div>
+            <div class="aqi-item">
+              <span class="label">PM2.5 (μg/m³)</span>
+              <span id="pm25" class="value"></span>
+            </div>
+            <div class="aqi-item">
+              <span class="label">PM10 (μg/m³)</span>
+              <span id="pm10" class="value"></span>
+            </div>
+            <div class="aqi-item">
+              <span class="label">O₃ (μg/m³)</span>
+              <span id="o3" class="value"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>Powered by WeatherAPI.com</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
